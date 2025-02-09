@@ -63,20 +63,22 @@ html {
     background-color: #c1ad9d;
     display: flex;
     align-items: baseline;
-    padding: .5rem;
+    padding: .65rem;
     gap: 1rem;
+    margin-left: 0;
 }
 
 /* Dropdown Styles */
 .dropdown {
     position: relative;
+    width: 100%;
 }
 
 .dropdown-menu {
     position: absolute;
-    left: 0;
+    left: -2;
     top: calc(100% + .25rem);
-    background-color: white;
+    background-color: #c1ad9d;
     padding: .75rem;
     border-radius: .25rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
@@ -84,6 +86,7 @@ html {
     pointer-events: none;
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
 }
 
 .dropdown.active > .dropbtn + .dropdown-menu {
@@ -93,16 +96,21 @@ html {
 }
 
 /* Dropdown Button */
+
 .dropbtn {
     background: none;
-    color: white;
-    padding: 0;
+    color: black;
+    padding: 0 .65rem; /* Add padding to the left and right of the text */
     border: none;
     cursor: pointer;
     text-decoration: none;
     font-family: inherit;
     font-size: inherit;
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-align: left; /* Align text to the left */
+    width: auto; /* Allow the button to span the width of its content */
 }
+
 
 /* Dropdown Content */
 .dropdown-content {
@@ -115,11 +123,25 @@ html {
     border-radius: .25rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     opacity: 0;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px; /* Adds spacing between buttons */
+}
+
+.dropdownContent button {
+    width: 100%; /* Make buttons fill the dropdown width */
+    padding: 10px;
+    background-color: #c1ad9d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
 }
 
 .dropdown.active > .dropbtn,
 .dropbtn:hover {
-    color: black;
+    color: white;
 }
 
 .resizeable-block {
@@ -151,13 +173,14 @@ embed {
 }
 
 button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #dc3545;
-    color: #fff;
+    padding: .1rem .4rem;
+    background-color: #c1ad9d;
+    color: white;
     border: none;
-    border-radius: 3px;
     cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 iframe {
