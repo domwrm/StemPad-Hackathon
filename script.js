@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add a close button
         const closeButton = document.createElement("button");
-        closeButton.textContent = "Close";
+        closeButton.textContent = "X";
         closeButton.style.marginTop = "10px";
         closeButton.contentEditable = "false"; // Ensure the button is non-editable
         closeButton.addEventListener("click", () => {
