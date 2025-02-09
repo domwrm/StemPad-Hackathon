@@ -53,6 +53,13 @@ html, body {
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.dropdown.active > .flap-container button,
+.flap-container button:hover {
+    background-color: red;
+}
+
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem; /* Adjust this value based on the height of your nav bar */
