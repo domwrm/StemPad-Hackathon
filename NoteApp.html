@@ -2,24 +2,26 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
     <!-- Top Border Section -->
-    <div class="top-border">
-
+    <div class="header">
         <!-- Dropdown Menu Inside the Border -->
-        <div class="dropdown">
-            <button class="dropbtn">Functionalities</button>
-            <div class="dropdown-content">
-                <button id="flapJsButton">flap.js</button>
+        <div class="dropdown" data-dropdown>
+            <button class="dropbtn" data-dropdown-button>Functionalities ▼</button>
+            <div class="dropdown-menu information">
+                <div class="dropdownContent">
+                    <button id="flapJsButton">flap.js</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <div contenteditable="true" id="textDocument" class="text-document">Enter your text here...</div>
+
     <div id="blocksContainer"></div>
 
     <script src="script.js" defer></script>
-
 </body>
 </html>
